@@ -1,6 +1,30 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { LESSON_REF_BY_ID, LESSON_REFS } from "../lib/curriculum";
+
+// Persist to localStorage, but fall back to in-memory storage if it's
+// unavailable (private browsing, sandboxed iframes) so the app never crashes
+// on load — progress just won't survive a refresh in that case.
+function makeSafeStorage(): Storage {
+  try {
+    const k = "__mr_test__";
+    localStorage.setItem(k, "1");
+    localStorage.removeItem(k);
+    return localStorage;
+  } catch {
+    const mem = new Map<string, string>();
+    return {
+      getItem: (key) => mem.get(key) ?? null,
+      setItem: (key, value) => void mem.set(key, value),
+      removeItem: (key) => void mem.delete(key),
+      clear: () => mem.clear(),
+      key: (i) => Array.from(mem.keys())[i] ?? null,
+      get length() {
+        return mem.size;
+      },
+    } as Storage;
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Persisted learner progress (localStorage). No accounts, no backend.
@@ -155,7 +179,11 @@ export const useProgress = create<ProgressState>()(
           lastPlayedDate: null,
         }),
     }),
-    { name: "monster-reader-progress", version: 1 },
+    {
+      name: "monster-reader-progress",
+      version: 1,
+      storage: createJSONStorage(makeSafeStorage),
+    },
   ),
 );
 

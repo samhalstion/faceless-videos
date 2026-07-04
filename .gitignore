@@ -8,3 +8,4 @@ dist-ssr
 coverage
 dev-dist
 *.tsbuildinfo
+dist-single
