@@ -87,6 +87,88 @@ export const STORIES: Story[] = [
       { text: "What fun! The fish did a flip!", emoji: "🐠" },
     ],
   },
+
+  {
+    id: "story-cake", // L5 — silent-e; heart: come, some, there
+    title: "Jake Bakes a Cake",
+    pages: [
+      { text: "Jake can bake a cake.", emoji: "🎂" },
+      { text: "The cake is on a plate.", emoji: "🍽️" },
+      { text: "Come and get some cake!", emoji: "🍰" },
+      { text: "Jake ate the cake. Yum!", emoji: "😋" },
+    ],
+  },
+  {
+    id: "story-bike", // L5 — silent-e; heart: where, were
+    title: "Pete Rides a Bike",
+    pages: [
+      { text: "Pete has a red bike.", emoji: "🚲" },
+      { text: "He rode the bike home.", emoji: "🏠" },
+      { text: "Where did Pete go?", emoji: "❓" },
+      { text: "Pete and Mike had fun!", emoji: "😄" },
+    ],
+  },
+  {
+    id: "story-rain", // L6 — vowel teams; heart: why, your
+    title: "A Rainy Day",
+    pages: [
+      { text: "It did rain all day.", emoji: "🌧️" },
+      { text: "We can not go out to play.", emoji: "🏠" },
+      { text: "Why is it so wet?", emoji: "💧" },
+      { text: "Then we see a big rainbow!", emoji: "🌈" },
+    ],
+  },
+  {
+    id: "story-moon", // L6 — oo/igh; heart: would, should
+    title: "The Moon at Night",
+    pages: [
+      { text: "It is night. I see the moon.", emoji: "🌙" },
+      { text: "The moon is high and bright.", emoji: "⭐" },
+      { text: "I would like to sleep soon.", emoji: "😴" },
+      { text: "Good night, moon!", emoji: "🌛" },
+    ],
+  },
+  {
+    id: "story-park", // L7 — r-controlled; heart: water, over
+    title: "The Park by the Sea",
+    pages: [
+      { text: "We park the car by the sea.", emoji: "🚗" },
+      { text: "A bird sings in a tree.", emoji: "🐦" },
+      { text: "The water is cold over here.", emoji: "🌊" },
+      { text: "We had corn for lunch. Yum!", emoji: "🌽" },
+    ],
+  },
+  {
+    id: "story-coin", // L7 — diphthongs; heart: about
+    title: "The Boy and the Coin",
+    pages: [
+      { text: "A boy found a coin.", emoji: "🪙" },
+      { text: "It was on the ground.", emoji: "🟫" },
+      { text: "The boy saw a big paw print.", emoji: "🐾" },
+      { text: "What was it about? A cat!", emoji: "🐱" },
+    ],
+  },
+  {
+    id: "story-rabbit", // L8 — multisyllable/inflections
+    title: "The Rabbit Picnic",
+    pages: [
+      { text: "The rabbit had a picnic.", emoji: "🐰" },
+      { text: "It was sunny and warm.", emoji: "☀️" },
+      { text: "The rabbit was munching a carrot.", emoji: "🥕" },
+      { text: "Then it started napping in the sun.", emoji: "😴" },
+    ],
+  },
+  {
+    id: "story-dino-ruins", // L8 — capstone
+    title: "The Lost Dino Egg",
+    pages: [
+      { text: "Deep in the ruins, a dino egg was hidden.", emoji: "🥚" },
+      { text: "A boy and his dog went looking for it.", emoji: "🔦" },
+      { text: "They looked under rocks and inside caves.", emoji: "🪨" },
+      { text: "At last, the egg started to crack!", emoji: "🐣" },
+      { text: "Out came a baby dino. What a day!", emoji: "🦕" },
+    ],
+  },
 ];
 
 export const STORY_BY_ID: Record<string, Story> = Object.fromEntries(

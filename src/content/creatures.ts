@@ -99,6 +99,98 @@ export const CREATURES: Creature[] = [
     emoji: "🐉",
     funFact: "Spinosaurus loved water and was even bigger than T. rex!",
   },
+
+  // --- Level 5 lesson rewards (Sunbeam Meadow) ---
+  { id: "beamkit", name: "Beamkit", kind: "pocketling", emoji: "🌟" },
+  { id: "petalpop", name: "Petalpop", kind: "pocketling", emoji: "🌸" },
+  { id: "sunbud", name: "Sunbud", kind: "pocketling", emoji: "🌻" },
+  { id: "rayling", name: "Rayling", kind: "pocketling", emoji: "☀️" },
+  { id: "glimflit", name: "Glimflit", kind: "pocketling", emoji: "🦋" },
+
+  // --- Level 6 lesson rewards (Tidal Reef) ---
+  { id: "coralet", name: "Coralet", kind: "pocketling", emoji: "🪸" },
+  { id: "finneo", name: "Finneo", kind: "pocketling", emoji: "🐠" },
+  { id: "wavelet", name: "Wavelet", kind: "pocketling", emoji: "🌊" },
+  { id: "pearlkin", name: "Pearlkin", kind: "pocketling", emoji: "🦪" },
+  { id: "tidepup", name: "Tidepup", kind: "pocketling", emoji: "🦭" },
+
+  // --- Level 7 lesson rewards (Storm Coast) ---
+  { id: "gustling", name: "Gustling", kind: "pocketling", emoji: "💨" },
+  { id: "boulderk", name: "Boulderk", kind: "pocketling", emoji: "🪨" },
+  { id: "sparkfin", name: "Sparkfin", kind: "pocketling", emoji: "🌩️" },
+  { id: "cragple", name: "Cragple", kind: "pocketling", emoji: "⛰️" },
+  { id: "windwhorl", name: "Windwhorl", kind: "pocketling", emoji: "🌀" },
+
+  // --- Level 8 lesson rewards (Ancient Ruins) ---
+  { id: "runeling", name: "Runeling", kind: "pocketling", emoji: "🔮" },
+  { id: "fossilit", name: "Fossilit", kind: "pocketling", emoji: "🦴" },
+  { id: "glyphmun", name: "Glyphmun", kind: "pocketling", emoji: "📜" },
+  { id: "relicto", name: "Relicto", kind: "pocketling", emoji: "🏺" },
+  { id: "chronox", name: "Chronox", kind: "pocketling", emoji: "⏳" },
+
+  // --- Region bosses (Levels 5–8) ---
+  { id: "solaris", name: "Solaris", kind: "pocketling", emoji: "🌞" },
+  { id: "leviatide", name: "Leviatide", kind: "pocketling", emoji: "🐙" },
+  { id: "cyclorag", name: "Cyclorag", kind: "pocketling", emoji: "🌪️" },
+  { id: "titanor", name: "Titanor", kind: "pocketling", emoji: "🗿" },
+
+  // --- Dinosaurs (Levels 5–8 unit hatches) ---
+  {
+    id: "diplo",
+    name: "Diplo the Diplodocus",
+    kind: "dino",
+    emoji: "🦕",
+    funFact: "Diplodocus was as long as three school buses lined up!",
+  },
+  {
+    id: "iguan",
+    name: "Iguan the Iguanodon",
+    kind: "dino",
+    emoji: "🦎",
+    funFact: "Iguanodon had a spiky thumb it may have used to fight off enemies.",
+  },
+  {
+    id: "plesio",
+    name: "Plesio the Plesiosaur",
+    kind: "dino",
+    emoji: "🐊",
+    funFact: "Plesiosaurs swam in the sea with four big flippers, like paddles.",
+  },
+  {
+    id: "mosa",
+    name: "Mosa the Mosasaurus",
+    kind: "dino",
+    emoji: "🐋",
+    funFact: "Mosasaurus was a giant sea reptile with a tail like a shark's.",
+  },
+  {
+    id: "allo",
+    name: "Allo the Allosaurus",
+    kind: "dino",
+    emoji: "🦖",
+    funFact: "Allosaurus was a fierce hunter long before T. rex existed.",
+  },
+  {
+    id: "cerato",
+    name: "Cerato the Ceratosaurus",
+    kind: "dino",
+    emoji: "🐲",
+    funFact: "Ceratosaurus had a horn on its nose and bumps above its eyes.",
+  },
+  {
+    id: "brachio",
+    name: "Brachio the Brachiosaurus",
+    kind: "dino",
+    emoji: "🦕",
+    funFact: "Brachiosaurus held its head high like a crane to eat treetops.",
+  },
+  {
+    id: "giganto",
+    name: "Giganto the Giganotosaurus",
+    kind: "dino",
+    emoji: "🦖",
+    funFact: "Giganotosaurus was one of the biggest meat-eaters ever to walk on land.",
+  },
 ];
 
 export const CREATURE_BY_ID: Record<string, Creature> = Object.fromEntries(
