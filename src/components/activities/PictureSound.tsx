@@ -39,7 +39,7 @@ export function PictureSound({ activity, onComplete }: ActivityProps<PictureSoun
 
   return (
     <ActivityFrame
-      instruction={`Which one starts with ${p?.say ?? ""}?`}
+      instruction="Which picture starts with this sound?"
       replay={p?.say ?? ""}
     >
       <button

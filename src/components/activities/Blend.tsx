@@ -25,9 +25,11 @@ export function Blend({ activity, onComplete }: ActivityProps<BlendActivity>) {
   );
 
   function soundOut() {
-    // Speak each grapheme sound, then the whole blended word.
-    tiles.forEach((t, i) => setTimeout(() => speakPhoneme(t), i * 650));
-    setTimeout(() => speakWord(activity.word), tiles.length * 650 + 150);
+    // Sound out each part, then blend into the whole word smoothly. Shorter gaps
+    // read as connected blending rather than choppy, isolated letters.
+    const gap = 430;
+    tiles.forEach((t, i) => setTimeout(() => speakPhoneme(t), i * gap));
+    setTimeout(() => speakWord(activity.word), tiles.length * gap + 200);
   }
 
   function choose(word: string, correct: boolean) {

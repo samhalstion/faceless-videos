@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { PHONEME_BY_ID } from "../../content/phonemes";
 import type { SoundTapActivity } from "../../content/types";
@@ -10,10 +11,18 @@ import { EXPLORATORY, type ActivityProps } from "./types";
 /** "I do" — model a new letter-sound. Tap the letter to hear its sound. */
 export function SoundTap({ activity, onComplete }: ActivityProps<SoundTapActivity>) {
   const p = PHONEME_BY_ID[activity.graphemeId];
+
+  // Play the sound itself on entry (never show the raw phonetic spelling to a child).
+  useEffect(() => {
+    if (!p) return;
+    const t = setTimeout(() => speakPhoneme(p.id), 400);
+    return () => clearTimeout(t);
+  }, [p]);
+
   if (!p) return null;
 
   return (
-    <ActivityFrame instruction={`This says ${p.say}`} replay={`${p.say}. ${p.example}.`}>
+    <ActivityFrame instruction="Listen, then say the sound!" autoSpeak={false} replay={p.say}>
       <div className="flex flex-col items-center gap-6">
         <motion.button
           whileTap={{ scale: 0.9 }}
